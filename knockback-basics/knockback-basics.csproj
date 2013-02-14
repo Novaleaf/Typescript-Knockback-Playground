@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <ProjectGuid>{ECE3C211-34A8-4A9C-9856-0B63121019F0}</ProjectGuid>
+    <ProjectGuid>{BD56251E-386D-4E10-A1FA-A2FAA153E412}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <OutputPath>bin</OutputPath>
@@ -25,7 +25,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>typescript_knockback_todomvc</RootNamespace>
+    <RootNamespace>knockback_basics</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -36,9 +36,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>2203</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:37546/</IISUrl>
+          <IISUrl>http://localhost:1891/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -58,5 +58,57 @@
     <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
     <TypeScriptSourceMap>false</TypeScriptSourceMap>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ko-observable-by-hand\basic-observable-byhand.js">
+      <DependentUpon>basic-observable-byhand.ts</DependentUpon>
+    </Content>
+    <Content Include="ko-observable-by-hand\_all.js">
+      <DependentUpon>_all.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="ko-observable-by-hand\_all.ts" />
+    <TypeScriptCompile Include="ko-observable-by-hand\basic-observable-byhand.ts" />
+    <Content Include="ko-observable-by-hand\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ko-observable-by-hand\basic-observable-byhand.js.map">
+      <DependentUpon>basic-observable-byhand.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ko-observable-by-hand\_all.js.map">
+      <DependentUpon>_all.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.md" />
+    <Content Include="sync-core.cmd" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>@echo .
+@echo .
+@echo ====================  ====================    ====================  
+@echo ====================  START EXECUTING PRE-BUILD EVENTS SCRIPTS FOR $(ProjectName)
+@echo ====================  ====================    ====================  
+@echo .
+@echo .
+$(ProjectDir)sync-core.cmd
+@echo .
+@echo .
+@echo ====================  ====================    ====================  
+@echo ====================  FINISHED EXECUTING PRE-BUILD EVENTS SCRIPTS FOR $(ProjectName)
+@echo ====================  ====================    ====================  
+@echo .
+@echo .</PreBuildEvent>
+  </PropertyGroup>
 </Project>

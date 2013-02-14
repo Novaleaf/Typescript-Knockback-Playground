@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "typescript-knockback-todomvc", "typescript-knockback-todomvc\typescript-knockback-todomvc.csproj", "{ECE3C211-34A8-4A9C-9856-0B63121019F0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Novaleaf-Core-Libraries", "Novaleaf-Core-Libraries\Novaleaf-Core-Libraries.csproj", "{D8391FE6-7B31-47F0-A12F-78BB3B4CA1D4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{098E0337-71AD-423C-9B0A-DA8D96F88A93}"
@@ -13,20 +11,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		WE-settings.xml = WE-settings.xml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "knockback-basics", "knockback-basics\knockback-basics.csproj", "{BD56251E-386D-4E10-A1FA-A2FAA153E412}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ECE3C211-34A8-4A9C-9856-0B63121019F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ECE3C211-34A8-4A9C-9856-0B63121019F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ECE3C211-34A8-4A9C-9856-0B63121019F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ECE3C211-34A8-4A9C-9856-0B63121019F0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D8391FE6-7B31-47F0-A12F-78BB3B4CA1D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D8391FE6-7B31-47F0-A12F-78BB3B4CA1D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8391FE6-7B31-47F0-A12F-78BB3B4CA1D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8391FE6-7B31-47F0-A12F-78BB3B4CA1D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD56251E-386D-4E10-A1FA-A2FAA153E412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD56251E-386D-4E10-A1FA-A2FAA153E412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD56251E-386D-4E10-A1FA-A2FAA153E412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD56251E-386D-4E10-A1FA-A2FAA153E412}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

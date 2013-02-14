@@ -13,3 +13,4 @@ auto-sync to the newest versions of this core-library.
 
 ### see the "knockback-basics" project for a good example.
 
+# READ-ONLY! any changes will be deleted.  this is a mirror of the 'Novaleaf-Core-Libraries' project 
