@@ -59,23 +59,26 @@
     <TypeScriptSourceMap>false</TypeScriptSourceMap>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="ko-observable-by-hand\basic-observable-byhand.js">
-      <DependentUpon>basic-observable-byhand.ts</DependentUpon>
+    <Content Include="tutorial-kb-observable\basic-observable-byhand.js">
+      <DependentUpon>tutorial-kb-observable.ts</DependentUpon>
     </Content>
-    <Content Include="ko-observable-by-hand\_all.js">
+    <Content Include="tutorial-kb-observable\tutorial-kb-observable.js">
+      <DependentUpon>tutorial-kb-observable.ts</DependentUpon>
+    </Content>
+    <Content Include="tutorial-kb-observable\_all.js">
       <DependentUpon>_all.ts</DependentUpon>
     </Content>
-    <TypeScriptCompile Include="ko-observable-by-hand\_all.ts" />
-    <TypeScriptCompile Include="ko-observable-by-hand\basic-observable-byhand.ts" />
-    <Content Include="ko-observable-by-hand\index.html" />
+    <TypeScriptCompile Include="tutorial-kb-observable\_all.ts" />
+    <TypeScriptCompile Include="tutorial-kb-observable\tutorial-kb-observable.ts" />
+    <Content Include="tutorial-kb-observable\index.html" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ko-observable-by-hand\basic-observable-byhand.js.map">
-      <DependentUpon>basic-observable-byhand.ts</DependentUpon>
+    <Content Include="tutorial-kb-observable\basic-observable-byhand.js.map">
+      <DependentUpon>tutorial-kb-observable.ts</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ko-observable-by-hand\_all.js.map">
+    <Content Include="tutorial-kb-observable\_all.js.map">
       <DependentUpon>_all.ts</DependentUpon>
     </Content>
   </ItemGroup>
@@ -85,6 +88,9 @@
   <ItemGroup>
     <Content Include="Readme.md" />
     <Content Include="sync-core.cmd" />
+    <Content Include="tutorial-kb-observable\tutorial-kb-observable.js.map">
+      <DependentUpon>tutorial-kb-observable.ts</DependentUpon>
+    </Content>
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

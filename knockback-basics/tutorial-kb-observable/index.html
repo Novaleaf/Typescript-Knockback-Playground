@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="..\core\dev-libs\jquery\jquery-1.9.1.js"></script>
+    <script src="..\core\dev-libs\knockback\0.16.8\knockback-full-stack.js"></script>
+    <script src="..\core\scripts\helpers.js"></script>
+    <!-- need to defer your app code, so that the DOM is fully loaded.  see: http://stackoverflow.com/questions/9128015/knockout-syntax-error   -->
+    <script src="tutorial-kb-observable.js" defer="defer"></script>
+</head>
+<body>
+    hello world yesah
+    <div id='kboo_read_write'>
+        <input class='input-small pull-right' data-bind="value: formatted_number, valueUpdate: 'keyup'" />
+        <label data-bind="text: number"></label>
+    </div>
+</body>
+</html>

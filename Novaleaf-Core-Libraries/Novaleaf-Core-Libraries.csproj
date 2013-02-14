@@ -21,6 +21,7 @@
     <UpgradeBackupLocation />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="dev-libs\jquery\jquery-1.9.1.js" />
     <Content Include="dev-libs\knockback\0.16.8\knockback-full-stack.js" />
     <Content Include="scripts\helpers.js">
       <DependentUpon>helpers.ts</DependentUpon>

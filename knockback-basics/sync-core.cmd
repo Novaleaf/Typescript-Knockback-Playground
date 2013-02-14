@@ -42,6 +42,14 @@ set readmeText=# READ-ONLY! any changes will be deleted.  this is a mirror of th
 @echo %readmeText% >> "%targetReadme%"
 @attrib +R "%targetReadme%"
 
+@echo allow overwrites of .map and .js files, as VS (web essentials) likes to rebuild them all the time
+pushd %targetDir%
+attrib +R * /S /D
+attrib -R *.map /S
+attrib -R *.js /S
+popd
+
+
 @echo .
 @echo .
 @echo ====================  ====================    ====================  
